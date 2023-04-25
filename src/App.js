@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Carlist from './components/Carlist';
+import { AppBar } from '@mui/material';
+import { Toolbar } from '@mui/material';
+import { Typography} from '@mui/material';
+import { Box } from "@mui/material";
+import AddCar from './components/AddCar';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Box sx={{ flexGrow: 1}}>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6">
+            CarShop
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      </Box>
+      <Carlist />
     </div>
   );
 }
